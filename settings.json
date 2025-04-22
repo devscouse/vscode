@@ -1,8 +1,10 @@
 {
+  "editor.codeLens": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "window.titleBarStyle": "native",
   "editor.cursorSmoothCaretAnimation": "off",
   "files.insertFinalNewline": true,
-  "debug.console.fontFamily": "JetBrains mono",
+  "debug.console.fontFamily": "cascadia code",
   "debug.console.fontSize": 15,
   "debug.console.lineHeight": 35,
   "debug.toolBarLocation": "docked",
@@ -73,9 +75,8 @@
     "other": true
   },
   "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": "single",
-  "workbench.sideBar.location": "right",
   "editor.snippetSuggestions": "top",
   "editor.parameterHints.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
@@ -87,19 +88,71 @@
   "vim.handleKeys": {
     "<C-e>": false,
     "<C-a>": false,
+    "<C-b>": false,
+    "<C-Tab>": false
   },
-  "vim.normalModeKeyBindingsNonRecursive": [
+  "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<space>",
+        "<leader>",
         "y"
       ],
       "commands": [
         "editor.action.clipboardCopyAction"
       ],
-      "when": "textInputFocus",
     }
   ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "y"
+      ],
+      "commands": [
+        "editor.action.clipboardCopyAction"
+      ],
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "K"
+      ],
+      "after": [
+        "g",
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n",
+      ],
+      "after": [
+        "F2"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
       "before": [
@@ -110,5 +163,8 @@
         "<Esc>"
       ]
     }
-  ]
+  ],
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.2)",
+  "vim.highlightedyank.duration": 100,
+  "vim.highlightedyank.enable": true,
 }
