@@ -1,21 +1,21 @@
 {
-  "editor.codeLens": false,
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "window.titleBarStyle": "native",
-  "editor.cursorSmoothCaretAnimation": "off",
-  "files.insertFinalNewline": true,
   "debug.console.fontFamily": "cascadia code",
   "debug.console.fontSize": 15,
   "debug.console.lineHeight": 35,
   "debug.toolBarLocation": "docked",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
+  "editor.codeLens": false,
   "editor.colorDecorators": false,
+  "editor.cursorSmoothCaretAnimation": "off",
   "editor.cursorStyle": "line",
   "editor.fontFamily": "cascadia code",
   "editor.fontLigatures": "'ss01', 'cv03', 'zero'",
   "editor.fontSize": 15,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -25,71 +25,82 @@
   "editor.guides.indentation": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.lineHeight": 25,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "relative",
   "editor.matchBrackets": "near",
   "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
   "editor.occurrencesHighlight": "off",
+  "editor.quickSuggestionsDelay": 0,
   "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "none",
   "editor.scrollbar.horizontalScrollbarSize": 8,
   "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.stickyScroll.enabled": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
   "explorer.compactFolders": false,
   "explorer.decorations.badges": false,
   "explorer.openEditors.visible": 1,
-  "git.enableSmartCommit": true,
+  "files.insertFinalNewline": true,
   "git.confirmSync": false,
+  "git.enableSmartCommit": true,
   "markdown.preview.markEditorSelection": false,
   "problems.decorations.enabled": false,
   "scm.diffDecorations": "none",
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.lineHeight": 1.85,
   "window.autoDetectColorScheme": true,
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "auto",
   "window.newWindowDimensions": "inherit",
-  "window.title": "‎",
+  "window.title": "‎${folderName}",
+  "window.titleBarStyle": "native",
+  "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.editor.enablePreview": false,
   "workbench.editor.revealIfOpen": true,
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.layoutControl.enabled": false,
   "workbench.list.horizontalScrolling": true,
   "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.tree.indent": 16,
   "workbench.tree.renderIndentGuides": "none",
-  "window.customTitleBarVisibility": "auto",
-  "workbench.activityBar.location": "hidden",
-  "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
-  "editor.stickyScroll.enabled": false,
-  "editor.mouseWheelZoom": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.banner": "never",
-  "editor.formatOnSave": true,
-  "editor.unicodeHighlight.nonBasicASCII": false,
-  "editor.formatOnPaste": true,
-  "editor.quickSuggestionsDelay": 0,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.showTabs": "single",
+  "workbench.preferredLightColorTheme": "Catppuccin Mocha",
+  "workbench.statusBar.visible": true,
   "editor.quickSuggestions": {
     "comments": true,
     "strings": true,
     "other": true
   },
-  "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.statusBar.visible": true,
-  "workbench.editor.showTabs": "single",
-  "editor.snippetSuggestions": "top",
-  "editor.parameterHints.enabled": false,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.cursorBlinking": "solid",
   "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "solid",
+  "editor.parameterHints.enabled": false,
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "explorer.confirmPasteNative": false,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
   "window.menuBarVisibility": "toggle",
-  "workbench.preferredLightColorTheme": "Catppuccin Mocha",
   "vim.handleKeys": {
     "<C-e>": false,
     "<C-a>": false,
     "<C-b>": false,
-    "<C-Tab>": false
+    "<C-Tab>": false,
+    "<S-Tab>": false
   },
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -129,8 +140,8 @@
         "r",
         "n",
       ],
-      "after": [
-        "F2"
+      "commands": [
+        "editor.action.rename"
       ]
     },
     {
@@ -150,6 +161,39 @@
       "commands": [
         "editor.action.marker.next"
       ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f",
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "v"
+      ],
+      "commands": [
+        "workbench.files.action.focusFilesExplorer"
+      ],
+      "when": "editorTextFocus",
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ]
     }
   ],
   "vim.leader": "<space>",
@@ -162,6 +206,14 @@
       "after": [
         "<Esc>"
       ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "editor.action.triggerParameterHints"
+      ],
     }
   ],
   "vim.highlightedyank.color": "rgba(250, 240, 170, 0.2)",

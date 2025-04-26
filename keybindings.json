@@ -35,4 +35,27 @@
         "command": "-acceptSelectedSuggestion",
         "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
     },
+    {
+        "key": "ctrl+s",
+        "command": "-workbench.action.files.save"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "tab",
+        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "tab",
+        "command": "quickInput.next",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+    },
 ]
