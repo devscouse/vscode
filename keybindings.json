@@ -58,4 +58,14 @@
         "command": "quickInput.next",
         "when": "inQuickInput && quickInputType == 'quickPick'"
     },
+    {
+        "key": "o",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "shift+o",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && !inputFocus && vim.mode == 'Normal'"
+    },
 ]

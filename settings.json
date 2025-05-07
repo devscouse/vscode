@@ -97,7 +97,7 @@
   "window.menuBarVisibility": "toggle",
   "vim.handleKeys": {
     "<C-e>": false,
-    "<C-a>": false,
+    "<C-w>": false,
     "<C-b>": false,
     "<C-Tab>": false,
     "<S-Tab>": false
@@ -181,7 +181,6 @@
       "commands": [
         "workbench.files.action.focusFilesExplorer"
       ],
-      "when": "editorTextFocus",
     },
     {
       "before": [
@@ -193,6 +192,19 @@
         "g",
         "v",
         "y"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "a",
+      ],
+      "after": [
+        "g",
+        "g",
+        "V",
+        "G"
       ]
     }
   ],
@@ -219,4 +231,5 @@
   "vim.highlightedyank.color": "rgba(250, 240, 170, 0.2)",
   "vim.highlightedyank.duration": 100,
   "vim.highlightedyank.enable": true,
+  "extensions.ignoreRecommendations": true,
 }
